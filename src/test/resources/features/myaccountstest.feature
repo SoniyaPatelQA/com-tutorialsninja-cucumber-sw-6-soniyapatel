@@ -22,7 +22,7 @@ Feature: My Account feature
     And Call selectMyAccountOptions method and pass the parameter "Register"
     And Enter First Name "Test First Name"
     And Enter Last Name "Test Last Name"
-    And Enter Email "testfnln935@gmail.com"
+    And Enter Email "testfnln936@gmail.com"
     And Enter Telephone "04532157543"
     And Enter Password "test@123"
     And  Enter Password Confirm "test@123"
@@ -41,7 +41,7 @@ Feature: My Account feature
     Given I am on homepage
     When Click on My Account Link
     And Call selectMyAccountOptions method and pass the parameter "Login"
-    And Enter Email address "testfnln935@gmail.com"
+    And Enter Email address "testfnln936@gmail.com"
     #And  Enter Last Name
     And Enter login Password "test@123"
     And Click on Login button
