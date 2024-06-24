@@ -1,0 +1,2101 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Tutorial Ninja Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jun 24, 2024 04:24:01 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jun 24, 2024 04:24:01 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jun 24, 2024 04:32:06 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>4</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>4</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>16</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>174</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Desktops Product":304.539,"Laptops and notebooks menu":51.583,"My Account feature":110.559,"Top Menu feature":17.352
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@author_SoniyaPatel</td>
+<td>10</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@smoke</td>
+<td>13</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@sanity</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@regression</td>
+<td>16</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@author_SoniyaPate</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Engineer</td>
+<td>Soniya Patel</td>
+</tr>
+<tr>
+<td>Project</td>
+<td>Tutorial Ninja</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 4,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 16,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 174,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@author_SoniyaPatel</a><a class="dropdown-item" href="#">@smoke</a><a class="dropdown-item" href="#">@sanity</a><a class="dropdown-item" href="#">@regression</a><a class="dropdown-item" href="#">@author_SoniyaPate</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Desktops Product</p>
+            <p class="text-sm">
+              <span>16:24:02</span> / <span>00:05:04:539</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Desktops Product</h5>
+<span class='badge badge-success'>06.24.2024 16:24:02</span>
+<span class='badge badge-danger'>06.24.2024 16:29:06</span>
+<span class='badge badge-default'>00:05:04:539</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">As a user I want to check desktop products and add products into cart</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify Product Arrange In AlphaBatical Order</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.iAmOnHomepage()">
+                <span>Given I am on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.DesktopsTestSteps.mouseHoverOnDesktopsTabAndClick()">
+                <span>When Mouse hover on Desktops Tab.and click</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.DesktopsTestSteps.clickOnShowAllDesktops()">
+                <span>And Click on Show All Desktops</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.DesktopsTestSteps.selectSortByPosition(java.lang.String)">
+                <span>And Select Sort By position "Name (Z - A)"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.DesktopsTestSteps.verifyTheProductWillArrangeInDescendingOrder()">
+                <span>Then Verify the Product will arrange in Descending order</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>Verify Product Added To Shopping Cart SuccessFully</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>Verify Product Added To Shopping Cart SuccessFully</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>When Mouse hover on Currency Dropdown and click</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Mouse hover on £Pound Sterling and click</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Mouse hover on Desktops Tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Show All Desktops</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Select Sort By position "Name (A - Z)"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Select product name "HTC Touch HD"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Verify the Text "HTC Touch HD"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Qty "1" using Select class.</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on “Add to Cart” button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Message “Success: You have added "HTC Touch HD" to your shopping cart!”</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Click on link “shopping cart” display into success message</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the shopping cart text "Shopping Cart"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Product name "HTC Touch HD"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Model "Product 1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Total "£74.73"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="29"><span class="badge log pass-bg mr-2">Pass</span>Verify Product Added To Shopping Cart SuccessFully</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>When Mouse hover on Currency Dropdown and click</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Mouse hover on £Pound Sterling and click</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Mouse hover on Desktops Tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Show All Desktops</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Select Sort By position "Name (A - Z)"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Select product name "iPhone"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Verify the Text "iPhone"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Qty "1" using Select class.</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on “Add to Cart” button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Message “Success: You have added "iPhone" to your shopping cart!”</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Click on link “shopping cart” display into success message</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the shopping cart text "Shopping Cart"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Product name "iPhone"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Model "product 11"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Total "£75.46"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="47"><span class="badge log pass-bg mr-2">Pass</span>Verify Product Added To Shopping Cart SuccessFully</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>When Mouse hover on Currency Dropdown and click</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Mouse hover on £Pound Sterling and click</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Mouse hover on Desktops Tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Show All Desktops</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Select Sort By position "Name (A - Z)"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Select product name "iPod Classic"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Verify the Text "iPod Classic"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Qty "1" using Select class.</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on “Add to Cart” button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Message “Success: You have added "iPod Classic" to your shopping cart!”</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Click on link “shopping cart” display into success message</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the shopping cart text "Shopping Cart"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Product name "iPod Classic"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Model "product 20"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Total "£74.73"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="65"><span class="badge log pass-bg mr-2">Pass</span>Verify Product Added To Shopping Cart SuccessFully</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>When Mouse hover on Currency Dropdown and click</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Mouse hover on £Pound Sterling and click</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Mouse hover on Desktops Tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Show All Desktops</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Select Sort By position "Name (A - Z)"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Select product name "MacBook"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Verify the Text "MacBook"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Qty "1" using Select class.</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on “Add to Cart” button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Message “Success: You have added "MacBook" to your shopping cart!”</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Click on link “shopping cart” display into success message</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the shopping cart text "Shopping Cart"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Product name "MacBook"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Model "Product 16"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Total "£368.73"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="83"><span class="badge log pass-bg mr-2">Pass</span>Verify Product Added To Shopping Cart SuccessFully</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>When Mouse hover on Currency Dropdown and click</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Mouse hover on £Pound Sterling and click</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Mouse hover on Desktops Tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Show All Desktops</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Select Sort By position "Name (A - Z)"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Select product name "MacBook Air"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Verify the Text "MacBook Air"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Qty "1" using Select class.</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on “Add to Cart” button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Message “Success: You have added "MacBook Air" to your shopping cart!”</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Click on link “shopping cart” display into success message</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the shopping cart text "Shopping Cart"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Product name "MacBook Air"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Model "Product 17"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Total "£736.23"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="101"><span class="badge log pass-bg mr-2">Pass</span>Verify Product Added To Shopping Cart SuccessFully</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>When Mouse hover on Currency Dropdown and click</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Mouse hover on £Pound Sterling and click</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Mouse hover on Desktops Tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on Show All Desktops</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Select Sort By position "Name (A - Z)"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Select product name "Sony VAIO"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Verify the Text "Sony VAIO"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Qty "1" using Select class.</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on “Add to Cart” button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Message “Success: You have added "Sony VAIO" to your shopping cart!”</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Click on link “shopping cart” display into success message</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the shopping cart text "Shopping Cart"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Product name "Sony VAIO"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Model "Product 19"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify the Total "£736.23"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="119"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Laptops and notebooks menu</p>
+            <p class="text-sm">
+              <span>16:29:06</span> / <span>00:00:51:583</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Laptops and notebooks menu</h5>
+<span class='badge badge-success'>06.24.2024 16:29:06</span>
+<span class='badge badge-danger'>06.24.2024 16:29:58</span>
+<span class='badge badge-default'>00:00:51:583</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=119</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a user, i want to check laptop and notebook product and place order successfully</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="120"><span class="badge log pass-bg mr-2">Pass</span>Verify Products Price Display High To Low Successfully</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.iAmOnHomepage()">
+                <span>Given I am on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.mouseHoverOnLaptopsNotebooksTabAndClick()">
+                <span>When Mouse hover on Laptops & Notebooks Tab and click</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.clickOnShowAllLaptopsNotebooks()">
+                <span>And Click on Show All Laptops & Notebooks</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.selectSortBy(java.lang.String)">
+                <span>And Select Sort By "Price (High > Low)"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.verifyTheProductPriceWillArrangeInHighToLowOrder()">
+                <span>Then Verify the Product price will arrange in High to Low order</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="128"><span class="badge log pass-bg mr-2">Pass</span>Verify That User Place Order Successfully</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.iAmOnHomepage()">
+                <span>Given I am on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.mouseHoverOnLaptopsNotebooksTabAndClick()">
+                <span>When Mouse hover on Laptops & Notebooks Tab and click</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.clickOnShowAllLaptopsNotebooks()">
+                <span>And Click on Show All Laptops & Notebooks</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.selectSortBy(java.lang.String)">
+                <span>And Select Sort By "Price (High > Low)"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.select_product_hp_lp3065()">
+                <span>And Select Product “HP LP3065”</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.verifyTheProductText(java.lang.String)">
+                <span>Then Verify the product text "HP LP3065"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.clickOnAddToCartButton()">
+                <span>When Click on Add To Cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.verifyTheSuccessMessage(java.lang.String)">
+                <span>Then Verify the success message "Success: You have added HP LP3065 to your shopping cart!"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.clickOnLinkShoppingCartDisplayIntoSuccessMessage()">
+                <span>When Click on link shopping cart display into success message</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.DesktopsTestSteps.verifyTheShoppingCartText(java.lang.String)">
+                <span>Then Verify the shopping cart text "Shopping Cart"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.DesktopsTestSteps.verifyTheProductName(java.lang.String)">
+                <span>And Verify the Product name "HP LP3065"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.changeQuantity(java.lang.String)">
+                <span>When Change Quantity "2"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.clickOnUpdateTab()">
+                <span>And Click on Update Tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.verifyTheMessage(java.lang.String)">
+                <span>Then Verify the message "Success: You have modified your shopping cart!"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.DesktopsTestSteps.verifyTheTotal(java.lang.String)">
+                <span>And Verify the Total "$244.00"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.clickOnCheckoutButton()">
+                <span>When Click on Checkout button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.verifyTheText(java.lang.String)">
+                <span>Then Verify the text "Checkout"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.verifyTheNewCustomerText(java.lang.String)">
+                <span>And Verify the new customer Text "New Customer"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.clickOnGuestCheckoutRadioButton()">
+                <span>When Click on Guest Checkout radio button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.clickOnContinueTab()">
+                <span>And Click on Continue tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.fillTheMandatoryFields()">
+                <span>And Fill the mandatory fields</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.clickOnShippingMethodContinueButton()">
+                <span>And Click on Shipping Method Continue Button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.addCommentsAboutYourOrderIntoTextArea(java.lang.String)">
+                <span>And Add Comments About your order into text area "Kindly place near by address"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.checkTheTermsConditionsCheckBox()">
+                <span>And Check the Terms & Conditions check box</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.LaptopsAndNotebooksTestSteps.clickOnPaymentMethodContinueButton()">
+                <span>And Click on Payment Method Continue button</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="156"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">My Account feature</p>
+            <p class="text-sm">
+              <span>16:29:58</span> / <span>00:01:50:559</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">My Account feature</h5>
+<span class='badge badge-success'>06.24.2024 16:29:58</span>
+<span class='badge badge-danger'>06.24.2024 16:31:49</span>
+<span class='badge badge-default'>00:01:50:559</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=156</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a user i register an account and login to it.</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="157"><span class="badge log pass-bg mr-2">Pass</span>Verify User Should Navigate To Register Page Successfully</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.iAmOnHomepage()">
+                <span>Given I am on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.clickOnMyAccountLink()">
+                <span>When Click on My Account Link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.callSelectMyAccountOptionsMethodAndPassTheParameter(java.lang.String)">
+                <span>And Call selectMyAccountOptions method and pass the parameter "Register"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.verifyTheRegisterText(java.lang.String)">
+                <span>And Verify the Register text "Register Account"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="164"><span class="badge log pass-bg mr-2">Pass</span>Verify User Should Navigate To Login Page Successfully</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.iAmOnHomepage()">
+                <span>Given I am on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.clickOnMyAccountLink()">
+                <span>When Click on My Account Link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.callSelectMyAccountOptionsMethodAndPassTheParameter(java.lang.String)">
+                <span>And Call selectMyAccountOptions method and pass the parameter "Login"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.verifyTheTextOnLoginPage(java.lang.String)">
+                <span>Then Verify the text on login page "Returning Customer"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="171"><span class="badge log pass-bg mr-2">Pass</span>Verify That User Register Account Successfully</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.iAmOnHomepage()">
+                <span>Given I am on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.clickOnMyAccountLink()">
+                <span>When Click on My Account Link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.callSelectMyAccountOptionsMethodAndPassTheParameter(java.lang.String)">
+                <span>And Call selectMyAccountOptions method and pass the parameter "Register"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.enterFirstName(java.lang.String)">
+                <span>And Enter First Name "Test First Name"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.enterLastName(java.lang.String)">
+                <span>And Enter Last Name "Test Last Name"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.enterEmail(java.lang.String)">
+                <span>And Enter Email "testfnln935@gmail.com"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.enterTelephone(java.lang.String)">
+                <span>And Enter Telephone "04532157543"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.enterPassword(java.lang.String)">
+                <span>And Enter Password "test@123"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.enterPasswordConfirm(java.lang.String)">
+                <span>And Enter Password Confirm "test@123"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.selectSubscribeYesRadioButton()">
+                <span>And Select Subscribe Yes radio button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.clickOnPrivacyPolicyCheckBox()">
+                <span>And Click on Privacy Policy check box</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.clickOnContinueButton()">
+                <span>And Click on Continue button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.verifyTheMessage(java.lang.String)">
+                <span>Then Verify the  message "Your Account Has Been Created!"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.clickOnContinueButtonFromMyAccount()">
+                <span>And Click on Continue button from my account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.clickOnMyAccountLink()">
+                <span>And Click on My Account Link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.callSelectMyAccountOptionsMethodAndPassTheParameter(java.lang.String)">
+                <span>And Call selectMyAccountOptions method and pass the parameter "Logout"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.verifyTheAccountLogoutText(java.lang.String)">
+                <span>Then Verify the account logout text "Account Logout"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.clickOnContinueButtonFromMyAccount()">
+                <span>And Click on Continue button from my account</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="192"><span class="badge log pass-bg mr-2">Pass</span>Verify That User Should Login And Logout Successfully</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.iAmOnHomepage()">
+                <span>Given I am on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.clickOnMyAccountLink()">
+                <span>When Click on My Account Link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.callSelectMyAccountOptionsMethodAndPassTheParameter(java.lang.String)">
+                <span>And Call selectMyAccountOptions method and pass the parameter "Login"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.enterEmailAddress(java.lang.String)">
+                <span>And Enter Email address "testfnln935@gmail.com"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.enterLoginPassword(java.lang.String)">
+                <span>And Enter login Password "test@123"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.clickOnLoginButton()">
+                <span>And Click on Login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.verifyMyAccountText(java.lang.String)">
+                <span>And Verify my account text "My Account"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.clickOnMyAccountLink()">
+                <span>And Click on My Account Link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.callSelectMyAccountOptionsMethodAndPassTheParameter(java.lang.String)">
+                <span>And Call selectMyAccountOptions method and pass the parameter "Logout"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.verifyTheAccountLogoutText(java.lang.String)">
+                <span>And Verify the account logout text "Account Logout"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.MyAccountsTestSteps.clickOnContinueButtonFromMyAccount()">
+                <span>And Click on Continue button from my account</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="206"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Top Menu feature</p>
+            <p class="text-sm">
+              <span>16:31:49</span> / <span>00:00:17:352</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Top Menu feature</h5>
+<span class='badge badge-success'>06.24.2024 16:31:49</span>
+<span class='badge badge-danger'>06.24.2024 16:32:06</span>
+<span class='badge badge-default'>00:00:17:352</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=206</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a user, I navigate to selected menu page</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="207"><span class="badge log pass-bg mr-2">Pass</span>Verify User Should Navigate To Desktops Page Successfully</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.iAmOnHomepage()">
+                <span>Given I am on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.mouseHoverOnDesktopsTabAndClick()">
+                <span>When Mouse hover on Desktops Tab and click</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.callSelectMenuMethodAndPassTheMenu(java.lang.String)">
+                <span>And call selectMenu method and pass the menu "Show AllDesktops"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.verifyTheDesktopPageText(java.lang.String)">
+                <span>Then Verify the desktop page text "Desktops"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="214"><span class="badge log pass-bg mr-2">Pass</span>Verify User Should Navigate To Laptops And Notebooks Page Successfully</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.iAmOnHomepage()">
+                <span>Given I am on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.mouseHoverOnLaptopsNotebooksTabAndClick()">
+                <span>When Mouse hover on “Laptops & Notebooks” Tab and click</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.callSelectMenuMethodAndPassTheMenu(java.lang.String)">
+                <span>And call selectMenu method and pass the menu "Show AllLaptops & Notebooks"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.verifyTheLaptopPageText(java.lang.String)">
+                <span>Then Verify the laptop page text "Laptops & Notebooks"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="221"><span class="badge log pass-bg mr-2">Pass</span>verify User Should Navigate To Components Page Successfully</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.iAmOnHomepage()">
+                <span>Given I am on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.mouseHoverOnComponentsTabAndClick()">
+                <span>When Mouse hover on Components Tab and click</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.callSelectMenuMethodAndPassTheMenu(java.lang.String)">
+                <span>And call selectMenu method and pass the menu "Show AllComponents"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.tutorialsninja.demo.steps.TopMenuTestSteps.verifyTheComponentPageText(java.lang.String)">
+                <span>Then Verify the component page text "Components"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">5</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>10</span>
+</span>
+<p class="name">@author_SoniyaPatel</p>
+<p class="duration text-sm">10 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@author_SoniyaPatel</h4>
+<span status="pass" class='badge log pass-bg'>10 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:24:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify Product Arrange In AlphaBatical Order</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Arrange In AlphaBatical Order</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:29:06 pm</td>
+<td>
+<a href="#" class="linked" test-id='119' id='120'>Verify Products Price Display High To Low Successfully</a>
+<div class="">
+<span class="badge badge-default">Laptops and notebooks menu.Verify Products Price Display High To Low Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:29:13 pm</td>
+<td>
+<a href="#" class="linked" test-id='119' id='128'>Verify That User Place Order Successfully</a>
+<div class="">
+<span class="badge badge-default">Laptops and notebooks menu.Verify That User Place Order Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:29:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='156' id='157'>Verify User Should Navigate To Register Page Successfully</a>
+<div class="">
+<span class="badge badge-default">My Account feature.Verify User Should Navigate To Register Page Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:30:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='156' id='164'>Verify User Should Navigate To Login Page Successfully</a>
+<div class="">
+<span class="badge badge-default">My Account feature.Verify User Should Navigate To Login Page Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:30:10 pm</td>
+<td>
+<a href="#" class="linked" test-id='156' id='171'>Verify That User Register Account Successfully</a>
+<div class="">
+<span class="badge badge-default">My Account feature.Verify That User Register Account Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:31:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='156' id='192'>Verify That User Should Login And Logout Successfully</a>
+<div class="">
+<span class="badge badge-default">My Account feature.Verify That User Should Login And Logout Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:31:49 pm</td>
+<td>
+<a href="#" class="linked" test-id='206' id='207'>Verify User Should Navigate To Desktops Page Successfully</a>
+<div class="">
+<span class="badge badge-default">Top Menu feature.Verify User Should Navigate To Desktops Page Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:31:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='206' id='214'>Verify User Should Navigate To Laptops And Notebooks Page Successfully</a>
+<div class="">
+<span class="badge badge-default">Top Menu feature.Verify User Should Navigate To Laptops And Notebooks Page Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:32:00 pm</td>
+<td>
+<a href="#" class="linked" test-id='206' id='221'>verify User Should Navigate To Components Page Successfully</a>
+<div class="">
+<span class="badge badge-default">Top Menu feature.verify User Should Navigate To Components Page Successfully</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>13</span>
+</span>
+<p class="name">@smoke</p>
+<p class="duration text-sm">13 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@smoke</h4>
+<span status="pass" class='badge log pass-bg'>13 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:24:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify Product Arrange In AlphaBatical Order</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Arrange In AlphaBatical Order</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:24:10 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:25:07 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='29'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:25:43 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='47'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:26:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='65'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:27:35 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='83'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:28:31 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='101'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:29:06 pm</td>
+<td>
+<a href="#" class="linked" test-id='119' id='120'>Verify Products Price Display High To Low Successfully</a>
+<div class="">
+<span class="badge badge-default">Laptops and notebooks menu.Verify Products Price Display High To Low Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:29:13 pm</td>
+<td>
+<a href="#" class="linked" test-id='119' id='128'>Verify That User Place Order Successfully</a>
+<div class="">
+<span class="badge badge-default">Laptops and notebooks menu.Verify That User Place Order Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:29:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='156' id='157'>Verify User Should Navigate To Register Page Successfully</a>
+<div class="">
+<span class="badge badge-default">My Account feature.Verify User Should Navigate To Register Page Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:30:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='156' id='164'>Verify User Should Navigate To Login Page Successfully</a>
+<div class="">
+<span class="badge badge-default">My Account feature.Verify User Should Navigate To Login Page Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:31:49 pm</td>
+<td>
+<a href="#" class="linked" test-id='206' id='207'>Verify User Should Navigate To Desktops Page Successfully</a>
+<div class="">
+<span class="badge badge-default">Top Menu feature.Verify User Should Navigate To Desktops Page Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:31:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='206' id='214'>Verify User Should Navigate To Laptops And Notebooks Page Successfully</a>
+<div class="">
+<span class="badge badge-default">Top Menu feature.Verify User Should Navigate To Laptops And Notebooks Page Successfully</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+</span>
+<p class="name">@sanity</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@sanity</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:24:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify Product Arrange In AlphaBatical Order</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Arrange In AlphaBatical Order</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:29:06 pm</td>
+<td>
+<a href="#" class="linked" test-id='119' id='120'>Verify Products Price Display High To Low Successfully</a>
+<div class="">
+<span class="badge badge-default">Laptops and notebooks menu.Verify Products Price Display High To Low Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:29:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='156' id='157'>Verify User Should Navigate To Register Page Successfully</a>
+<div class="">
+<span class="badge badge-default">My Account feature.Verify User Should Navigate To Register Page Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:31:49 pm</td>
+<td>
+<a href="#" class="linked" test-id='206' id='207'>Verify User Should Navigate To Desktops Page Successfully</a>
+<div class="">
+<span class="badge badge-default">Top Menu feature.Verify User Should Navigate To Desktops Page Successfully</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>16</span>
+</span>
+<p class="name">@regression</p>
+<p class="duration text-sm">16 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@regression</h4>
+<span status="pass" class='badge log pass-bg'>16 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:24:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify Product Arrange In AlphaBatical Order</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Arrange In AlphaBatical Order</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:24:10 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:25:07 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='29'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:25:43 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='47'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:26:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='65'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:27:35 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='83'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:28:31 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='101'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:29:06 pm</td>
+<td>
+<a href="#" class="linked" test-id='119' id='120'>Verify Products Price Display High To Low Successfully</a>
+<div class="">
+<span class="badge badge-default">Laptops and notebooks menu.Verify Products Price Display High To Low Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:29:13 pm</td>
+<td>
+<a href="#" class="linked" test-id='119' id='128'>Verify That User Place Order Successfully</a>
+<div class="">
+<span class="badge badge-default">Laptops and notebooks menu.Verify That User Place Order Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:29:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='156' id='157'>Verify User Should Navigate To Register Page Successfully</a>
+<div class="">
+<span class="badge badge-default">My Account feature.Verify User Should Navigate To Register Page Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:30:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='156' id='164'>Verify User Should Navigate To Login Page Successfully</a>
+<div class="">
+<span class="badge badge-default">My Account feature.Verify User Should Navigate To Login Page Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:30:10 pm</td>
+<td>
+<a href="#" class="linked" test-id='156' id='171'>Verify That User Register Account Successfully</a>
+<div class="">
+<span class="badge badge-default">My Account feature.Verify That User Register Account Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:31:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='156' id='192'>Verify That User Should Login And Logout Successfully</a>
+<div class="">
+<span class="badge badge-default">My Account feature.Verify That User Should Login And Logout Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:31:49 pm</td>
+<td>
+<a href="#" class="linked" test-id='206' id='207'>Verify User Should Navigate To Desktops Page Successfully</a>
+<div class="">
+<span class="badge badge-default">Top Menu feature.Verify User Should Navigate To Desktops Page Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:31:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='206' id='214'>Verify User Should Navigate To Laptops And Notebooks Page Successfully</a>
+<div class="">
+<span class="badge badge-default">Top Menu feature.Verify User Should Navigate To Laptops And Notebooks Page Successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:32:00 pm</td>
+<td>
+<a href="#" class="linked" test-id='206' id='221'>verify User Should Navigate To Components Page Successfully</a>
+<div class="">
+<span class="badge badge-default">Top Menu feature.verify User Should Navigate To Components Page Successfully</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>6</span>
+</span>
+<p class="name">@author_SoniyaPate</p>
+<p class="duration text-sm">6 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@author_SoniyaPate</h4>
+<span status="pass" class='badge log pass-bg'>6 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:24:10 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:25:07 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='29'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:25:43 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='47'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:26:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='65'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:27:35 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='83'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:28:31 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='101'>Verify Product Added To Shopping Cart SuccessFully</a>
+<div class="">
+<span class="badge badge-default">Desktops Product.Verify Product Added To Shopping Cart SuccessFully</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
